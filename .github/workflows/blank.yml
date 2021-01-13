@@ -37,7 +37,7 @@ jobs:
 
   test:
     name: Run Unit Tests
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
@@ -46,4 +46,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Unit tests
-        run: bash ./gradlew assembleDebugAndroidTest --stacktrace
+        run: bash ./gradlew connectedAndroidTest --stacktrace
